@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+#content-container{
+	padding: 30px;
+	padding-top: 15px;
+}
+
+#content-header{
+	margin-bottom: 30px;
+}
+
+#content-item-list{
+	display: table;
+	width: 100%;
+}
+
+#content-list-wrap{
+	margin: 0 auto;
+}
+
+.content-item{
+	display: inline-block;
+	width: 200px;
+	height: 300px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+
+.add-project-btn{
+	background-color: #3C8DB7;
+}
+
+.user-project-btn{
+	background-color: #BE5F47;
+}
+
+.item-body{
+	padding-top: 25px;
+	padding-left: 25px;
+	padding-right: 25px;
+	height: 250px;
+}
+
+.item-body > p{
+	font-size: 14pt;
+	margin-bottom: 15px;
+}
+
+.line {
+	width: 100%;
+	height: 1px;
+	background-color: white;
+	margin-bottom: 40px;
+}
+
+.item-footer{
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #242C2E;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Doing</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="<?= get_asset_url('css', 'common.css'); ?>">
+	<link rel="stylesheet" href="<?= get_asset_url('css', 'project.css'); ?>">
+
+	<script>
+		var base_url = "<?= base_url() . 'index.php/' ?>"
+		var assets_url = "<?= base_url() . 'assets/' ?>"
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="<?= get_asset_url('js', 'project.js'); ?>" type="text/javascript"></script>
+</head>
+<body>
+	<div id="main-container">
+		<div id="nav-container">
+			<div id="nav-header">
+				<img src="<?= get_asset_url('img', 'icon/logo.png'); ?>" alt="">
+			</div>
+		</div>
+		<div id="content-container">
+			<div id="content-header">
+				<h3>Project Board</h3>
+			</div>
+			<div id="content-item-list">
+				<div id="content-list-wrap">
+					<div class="content-item add-project-btn">
+						<div class="item-body">
+							<p>Add New Project</p>
+							<div class="line"></div>
+							<img src="<?= get_asset_url('img', 'icon/add_p.png'); ?>" alt="">
+						</div>
+						<div class="item-footer">
+							<p>Add Folder</p>
+						</div>
+					</div>
+					<?php foreach ($project as $value):?>
+						<div class="content-item user-project-btn" alt="<?= $value->id ?>">
+							<div class="item-body">
+								<p><?= $value->name ?></p>
+								<div class="line"></div>
+								<img src="<?= get_asset_url('img', 'icon/local_p.png'); ?>" alt="">
+							</div>
+							<div class="item-footer">
+								<p>Modify</p>
+							</div>
+						</div>
+					<?php endforeach;?>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="projectModal" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Project Create</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div class="form-group">
+	            <label>Project Name</label>
+	            <input type="text" class="form-control" id="projectNameInput" placeholder="project name">
+	          </div>
+	      </div>
+	      <div class="modal-footer">
+	      	<button id="modal_ok_btn" type="button" class="btn btn-primary">Create</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</body>
+</html>

@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>403 Forbidden</title>
+	<meta charset="UTF-8">
+	<title>Doing</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="<?= get_asset_url('css', 'common.css'); ?>">
+	<link rel="stylesheet" href="<?= get_asset_url('css', 'main.css'); ?>">
 </head>
 <body>
-
-<p>Directory access is forbidden.</p>
-
+	<div id="main-container">
+		<div id="main-wrap" class="jumbotron" style="background:url(<?= get_asset_url('img', 'main.jpg'); ?>);">
+			<div id="main-item-area" class="container">
+				<h1>환 영 합 니 다</h1>
+				<p>나만의 특별한 웹페이지를 제작해보세요!</p>
+				<a href="<?= base_url() . 'index.php/api' ?>" class="custom-button">
+					<p>START</p>
+				</a>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
